@@ -1,0 +1,197 @@
+/* ====================== HEADER.CSS – FULLY RESPONSIVE WITH HAMBURGER ====================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 196, 180, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.4s ease;
+}
+
+.site-header.scrolled {
+  padding: 14px 0;
+  background: rgb(0, 196, 180);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* LOGO – BIG & BEAUTIFUL EVERYWHERE */
+.logo-img {
+  height: 92px;
+  width: auto;
+  max-width: 460px;
+  object-fit: contain;
+  transition: height 0.4s ease;
+}
+
+.site-header.scrolled .logo-img {
+  height: 76px;
+}
+
+/* DESKTOP NAVIGATION */
+.desktop-nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 50%;
+  background: white;
+  transition: width 0.35s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* CTA BUTTON (Desktop) */
+.desktop-cta {
+  background: white;
+  color: #00C4B4;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 196, 180, 0.35);
+  transition: all 0.35s ease;
+}
+
+.desktop-cta:hover {
+  background: #f0f8f8;
+  transform: translateY(-3px);
+}
+
+/* HAMBURGER ICON (Mobile only) */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.mobile-menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* MOBILE MENU OVERLAY */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 196, 180, 0.98);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu-overlay.open {
+  transform: translateY(0);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+}
+
+.mobile-nav-link {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mobile-nav-link.active {
+  color: white;
+  text-decoration: underline;
+}
+
+.mobile-cta {
+  background: white;
+  color: #00C4B4;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .desktop-nav,
+  .desktop-cta {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .logo-img {
+    height: 78px;
+  }
+
+  .site-header.scrolled .logo-img {
+    height: 66px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 68px;
+  }
+
+  .site-header.scrolled .logo-img {
+    height: 58px;
+  }
+}
