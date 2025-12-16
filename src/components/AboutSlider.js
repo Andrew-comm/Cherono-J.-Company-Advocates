@@ -5,7 +5,7 @@ import '../styles/AboutSlider.css';
 const aboutCards = [
   { 
     title: "Our Legacy", 
-    text: "Established in 2008, we have served thousands of clients across Kenya with distinction." 
+    text: "Established in 2016, we have served thousands of clients across Kenya with distinction." 
   },
   { 
     title: "Our Mission", 
@@ -26,7 +26,7 @@ function AboutSlider() {
     <section className="about-slider-section">
       <div className="about-slider-container">
         <h2 className="about-section-title">About Cherono J. & Company Advocates</h2>
-        <p className="about-section-subtitle">Leading legal excellence with integrity since 2008</p>
+        <p className="about-section-subtitle">Leading legal excellence with integrity since 2016</p>
         
         <div className="about-cards-grid">
           {aboutCards.map((card, i) => (
@@ -49,9 +49,7 @@ function AboutSlider() {
               </div>
               <h3 className="about-card-title">{card.title}</h3>
               <p className="about-card-text">{card.text}</p>
-              <div className="about-card-decoration">
-                <div className="decoration-line"></div>
-              </div>
+              
             </motion.div>
           ))}
         </div>

@@ -4,12 +4,7 @@ import { motion } from 'framer-motion';
 import '../styles/PracticeAreas.css';
 
 const areas = [
-  { 
-    name: "Land & Conveyancing", 
-    icon: "🏞️",
-    description: "Property disputes, title deeds, transfers, and land succession matters.",
-    color: "#48c9b0"
-  },
+ 
   { 
     name: "Family & Succession Law", 
     icon: "👨‍👩‍👧‍👦",
@@ -22,13 +17,7 @@ const areas = [
     description: "Contract disputes, business litigation, and commercial arbitration.",
     color: "#48c9b0"
   },
-  { 
-    name: "Criminal Defense", 
-    icon: "🛡️",
-    description: "Bail applications, trial representation, and appeal proceedings.",
-    color: "#1abc9c"
-  },
-  { 
+   { 
     name: "Corporate & Business Law", 
     icon: "🏢",
     description: "Company registration, compliance, mergers, and acquisitions.",
@@ -40,12 +29,7 @@ const areas = [
     description: "Debt collection, bankruptcy proceedings, and financial disputes.",
     color: "#1abc9c"
   },
-  { 
-    name: "Employment & Labor Law", 
-    icon: "👷",
-    description: "Employment contracts, unfair dismissal, and labor disputes.",
-    color: "#48c9b0"
-  },
+  
   { 
     name: "Constitutional & Judicial Review", 
     icon: "📜",

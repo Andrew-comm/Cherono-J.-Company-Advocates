@@ -46,7 +46,7 @@ function Footer() {
               Cherono J. & Company Advocates
             </h3>
             <p className="brand-tagline">
-              Your trusted legal partner in Eldoret since 2008.
+              Your trusted legal partner in Eldoret since 2016.
             </p>
             
             <div className="footer-slogan">
@@ -135,23 +135,12 @@ function Footer() {
               ))}
             </ul>
 
-            <div className="legal-links">
-              <h5 className="legal-title">Legal</h5>
-              <div className="legal-items">
-                <a href="#privacy" className="legal-link">Privacy Policy</a>
-                <a href="#terms" className="legal-link">Terms of Service</a>
-                <a href="#disclaimer" className="legal-link">Legal Disclaimer</a>
-              </div>
-            </div>
+            
           </motion.div>
         </div>
 
         {/* Divider */}
-        <div className="footer-divider">
-          <div className="divider-line"></div>
-          <div className="divider-icon">⚖</div>
-          <div className="divider-line"></div>
-        </div>
+        
 
         {/* Bottom Bar */}
         <motion.div 

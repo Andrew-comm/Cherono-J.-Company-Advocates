@@ -13,26 +13,8 @@ const Icon = {
   ArrowLeft: () => <span className="icon-emoji">←</span>
 };
 
-const practiceAreas = {
-  'land-conveyancing': {
-    title: 'Land & Conveyancing',
-    icon: <Icon.Scale />,
-    description: 'Expert handling of land transactions, title transfers, charges, leases, and dispute resolution throughout Kenya.',
-    services: [
-      'Land purchases & sales agreements',
-      'Title transfers & succession matters',
-      'Land subdivision & amalgamation',
-      'Charges, discharges & lease agreements',
-      'Land dispute litigation & resolution',
-      'Due diligence & title searches'
-    ],
-    experience: 'Successfully handled over 1,000 land transactions across Uasin Gishu, Nandi, and Trans-Nzoia counties with 99% client satisfaction.',
-    process: ['Initial Consultation & Assessment', 'Document Review & Title Searches', 'Drafting & Reviewing Agreements', 'Registration at Lands Registry', 'Post-Completion Support & Follow-up'],
-    testimonials: [
-      "They helped me secure my family's ancestral land after years of dispute.",
-      "Professional and efficient service for our commercial property purchase."
-    ]
-  },
+const practiceAreas = {  
+  
   'family-succession-law': {
     title: 'Family & Succession Law',
     icon: <Icon.Users />,
@@ -71,26 +53,8 @@ const practiceAreas = {
       "Excellent strategic approach to our commercial dispute."
     ]
   },
-  'criminal-defense': {
-    title: 'Criminal Defense',
-    icon: <Icon.FileText />,
-    description: 'Fearless and dedicated defense for individuals facing criminal charges at all court levels in Kenya.',
-    services: [
-      'Bail & bond applications',
-      'Defense in murder, robbery & assault cases',
-      'Corruption & economic crime defense',
-      'Appeals & revision applications',
-      'Plea bargaining & negotiations',
-      'Juvenile criminal matters'
-    ],
-    experience: 'Secured numerous acquittals and significantly reduced sentences in high-profile criminal matters across the Rift Valley region.',
-    process: ['Immediate Arrest Consultation', 'Bail/Bond Application & Hearing', 'Comprehensive Defense Strategy', 'Evidence Analysis & Witness Preparation', 'Trial Representation & Appeal Proceedings'],
-    testimonials: [
-      "Got my brother acquitted against all odds. Truly exceptional lawyers.",
-      "Professional and dedicated defense during a difficult time."
-    ]
-  },
-  'corporate-business-law': {
+  
+   'corporate-business-law': {
     title: 'Corporate & Business Law',
     icon: <Icon.CheckCircle />,
     description: 'Comprehensive legal support for businesses — from startup to expansion across Kenya.',

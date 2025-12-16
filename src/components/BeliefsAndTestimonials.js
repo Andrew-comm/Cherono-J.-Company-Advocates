@@ -25,26 +25,7 @@ const values = [
   }
 ];
 
-const testimonials = [
-  { 
-    name: "Mary Chebet", 
-    role: "Land Dispute Client",
-    text: "Professional, responsive, and highly effective. They won my land case after years of struggle!",
-    rating: 5
-  },
-  { 
-    name: "Dr. Kiprop", 
-    role: "Business Owner",
-    text: "Handled our company registration and contracts flawlessly. Highly recommend their commercial services.",
-    rating: 5
-  },
-  { 
-    name: "Jane Cheruiyot", 
-    role: "Family Law Client",
-    text: "Compassionate and strong in family matters. They gave me peace of mind during a difficult divorce.",
-    rating: 5
-  }
-];
+
 
 function BeliefsAndTestimonials() {
   return (
@@ -88,54 +69,7 @@ function BeliefsAndTestimonials() {
             ))}
           </div>
         </div>
-
-        {/* Testimonials Section */}
-        <div className="testimonials-section">
-          <div className="section-label">
-            <span className="label-text">Client Testimonials</span>
-            <div className="label-line"></div>
-          </div>
-          
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, i) => (
-              <motion.div 
-                key={i} 
-                className="testimonial-card"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.15, duration: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                {/* Rating Stars */}
-                <div className="testimonial-rating">
-                  {[...Array(testimonial.rating)].map((_, starIndex) => (
-                    <span key={starIndex} className="star">★</span>
-                  ))}
-                </div>
-                
-                {/* Quote */}
-                <div className="testimonial-content">
-                  <p className="testimonial-text">"{testimonial.text}"</p>
-                </div>
-                
-                {/* Client Info */}
-                <div className="testimonial-author">
-                  <div className="author-info">
-                    <h4 className="author-name">{testimonial.name}</h4>
-                    <p className="author-role">{testimonial.role}</p>
-                  </div>
-                  <div className="quote-icon">❝</div>
-                </div>
-                
-                {/* Decorative Element */}
-                <div className="testimonial-decoration">
-                  <div className="decoration-line"></div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+       
       </div>
     </section>
   );

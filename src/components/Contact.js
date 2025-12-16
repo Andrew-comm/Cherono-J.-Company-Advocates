@@ -3,11 +3,7 @@ import { motion } from 'framer-motion';
 import '../styles/Contact.css';
 
 function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    alert('Message sent successfully! We will contact you soon.');
-  };
+  
 
   return (
     <section id="contact" className="contact-section">
@@ -29,76 +25,9 @@ function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="form-header">
-              <h3>Get in Touch</h3>
-              <p>Fill out the form below and we'll respond within 24 hours</p>
-            </div>
+            
 
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-group">
-                <div className="input-icon">👤</div>
-                <input 
-                  type="text" 
-                  placeholder="Full Name" 
-                  className="form-input"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <div className="input-icon">✉</div>
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  className="form-input"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <div className="input-icon">📱</div>
-                <input 
-                  type="tel" 
-                  placeholder="Phone Number" 
-                  className="form-input"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <div className="input-icon">📝</div>
-                <select className="form-input" required>
-                  <option value="">Legal Service Required</option>
-                  <option value="land">Land & Property Disputes</option>
-                  <option value="family">Family Law</option>
-                  <option value="criminal">Criminal Defense</option>
-                  <option value="commercial">Commercial Law</option>
-                  <option value="civil">Civil Litigation</option>
-                  <option value="other">Other Legal Matter</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <div className="input-icon">💬</div>
-                <textarea 
-                  rows="5" 
-                  placeholder="Tell us about your case. How can we help you?"
-                  className="form-textarea"
-                  required
-                ></textarea>
-              </div>
-
-              <motion.button 
-                type="submit"
-                className="submit-button"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Send Message
-                <span className="button-icon">→</span>
-              </motion.button>
-            </form>
-
+           
             {/* Contact Info */}
             <div className="contact-info">
               <div className="info-item">
