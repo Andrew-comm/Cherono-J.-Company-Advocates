@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import '../styles/Header.css';
-import logo from '../Images/Logo.jpg'; // ← your logo path
+import logo from '../Images/logo.png'; // ← your logo path
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,8 +27,11 @@ function Header() {
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`} id="home">
       <div className="header-container">
         {/* Logo */}
-        <div className="logo" onClick={() => scroll.scrollToTop()} style={{ cursor: 'pointer' }}>
+          <div className="logo-wrapper" onClick={() => scroll.scrollToTop()} style={{ cursor: 'pointer' }}>
           <img src={logo} alt="Cherono J. & Company Advocates" className="logo-img" />
+          <p className="header-quote">
+            Delivering Justice with Integrity & Excellence
+          </p>
         </div>
 
         {/* Desktop Navigation */}

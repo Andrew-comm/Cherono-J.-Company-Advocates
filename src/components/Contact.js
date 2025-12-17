@@ -10,7 +10,7 @@ function Contact() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <h2 className="section-title">Visit Us in Eldoret</h2>
+          <h2 className="section-title">Visit us in Eldoret</h2>
           <p className="section-subtitle">
             Schedule a free consultation with our experienced legal team
           </p>

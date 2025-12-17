@@ -4,6 +4,7 @@ import './App.css';
 
 // Import all components
 import Header from './components/Header';
+import ContactTicker from './components/ContactTicker';
 import AnimatedIntro from './components/AnimatedIntro';
 import AboutSlider from './components/AboutSlider';
 import PracticeAreas from './components/PracticeAreas';
@@ -16,31 +17,39 @@ import PracticeAreaDetail from './components/PracticeAreaDetail';
 function Home() {
   return (
     <>
-      {/* Fixed Header with smooth scroll nav */}
+      {/* Fixed Header - always at top */}
       <Header />
 
-      {/* Hero / Intro */}
-      <AnimatedIntro />
+      {/* Fixed Contact Ticker - directly below header, always visible */}
+      <ContactTicker />
 
-      {/* All sections with correct IDs for smooth scroll */}
-      <section id="about">
-        <AboutSlider />
-      </section>
+      {/* Main content wrapper with top padding to prevent overlap */}
+      <main style={{ paddingTop: '140px' }}>  {/* Adjust if needed: Header (~80px) + Ticker (~60px) */}
 
-      <section id="practice">
-        <PracticeAreas />
-      </section>
+        {/* Hero Section - acts as visual home/landing */}
+        <section id="home">  {/* For smooth scroll link to top */}
+          <AnimatedIntro />
+        </section>
 
-      <section id="values">
-        <BeliefsAndTestimonials />
-      </section>
+        <section id="about">
+          <AboutSlider />
+        </section>
 
-      <section id="contact">
-        <Contact />
-      </section>
+        <section id="practice">
+          <PracticeAreas />
+        </section>
 
-      <Footer />
-      <Bottom />
+        <section id="values">
+          <BeliefsAndTestimonials />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+
+        <Footer />
+        <Bottom />
+      </main>
     </>
   );
 }
@@ -50,14 +59,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {/* Home Page - Smooth Scroll Navigation */}
           <Route path="/" element={<Home />} />
-
-          {/* Dynamic Practice Area Detail Pages */}
           <Route path="/practice/:area" element={<PracticeAreaDetail />} />
-
-          {/* Optional: Catch-all for unknown routes */}
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Home />} />  {/* Fallback to home */}
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,109 @@
+.contact-ticker {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: #14b8a6;    /* Turquoise Green */
+  color: white;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0;
+  margin-top: 30px;
+  z-index: 998;                 /* Below header (1000) */
+  transition: transform 0.4s ease; /* Smooth movement */
+  transform: translateY(132px);  /* Default: full header height */
+}
+
+ /* When header is scrolled (shrunk), pull ticker up */
+.site-header.scrolled + .contact-ticker {
+  transform: translateY(104px);  /* Scrolled header height */
+}
+
+.ticker-track {
+  display: inline-flex;
+  gap: 80px;
+  animation: scroll-left 40s linear infinite;
+}
+
+.ticker-duplicate {
+  display: inline-flex;
+  gap: 80px;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ticker-item a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.ticker-item a:hover {
+  border-bottom: 1px solid white;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.contact-ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .contact-ticker { transition: none; }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+  .contact-ticker {
+    transform: translateY(118px);   /* Tablet: logo 78px + padding */
+  }
+
+  .site-header.scrolled + .contact-ticker {
+    transform: translateY(100px);   /* Tablet scrolled: logo 66px + padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-ticker {
+    transform: translateY(108px);   /* Mobile: logo 68px + padding */
+    padding: 12px 0;
+    font-size: 0.95rem;
+  }
+
+  .site-header.scrolled + .contact-ticker {
+    transform: translateY(90px);    /* Mobile scrolled: logo 58px + padding */
+  }
+
+  .ticker-track,
+  .ticker-duplicate {
+    gap: 50px;
+  }
+
+  .ticker-track {
+    animation-duration: 35s;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-ticker {
+    font-size: 0.9rem;
+  }
+
+  .ticker-track,
+  .ticker-duplicate {
+    gap: 40px;
+  }
+}

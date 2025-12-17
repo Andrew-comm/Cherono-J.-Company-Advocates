@@ -6,10 +6,10 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Home", path: "#home" },
-    { name: "Practice Areas", path: "#services" },
+    { name: "Home", path: "#top" },
+    { name: "Practice Areas", path: "#practice" },
     { name: "About Us", path: "#about" },
-    { name: "Testimonials", path: "#testimonials" },
+    { name: "Testimonials", path: "#values" },
     { name: "Contact", path: "#contact" }
   ];
 

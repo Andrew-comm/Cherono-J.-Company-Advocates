@@ -195,3 +195,51 @@
     height: 58px;
   }
 }
+
+/* LOGO WRAPPER & QUOTE */
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px; /* Space between logo and quote */
+}
+
+.header-quote {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  opacity: 0.95;
+  text-align: left;
+  letter-spacing: 0.5px;
+  transition: opacity 0.4s ease;
+}
+
+/* Slightly fade quote when header shrinks on scroll */
+.site-header.scrolled .header-quote {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Mobile adjustments */
+@media (max-width: 1024px) {
+  .header-quote {
+    font-size: 0.9rem;
+  }
+
+  .site-header.scrolled .header-quote {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-quote {
+    font-size: 0.85rem;
+    text-align: center; /* Center on very small screens if preferred */
+  }
+
+  .logo-wrapper {
+    align-items: center; /* Center logo + quote on mobile */
+  }
+}
